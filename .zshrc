@@ -108,5 +108,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Add Laravel Sail alias
-alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+# Add alias file
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
