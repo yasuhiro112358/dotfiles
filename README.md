@@ -9,6 +9,13 @@ ln -s ~/dotfiles/.bash_profile ~/.bash_profile
 
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.zprofile ~/.zprofile
+
+ln -s ~/dotfiles/.aliases ~/.aliases
+
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
+
+ln -s ~/dotfiles/.vimrc ~/.vimrc
 ```
 
 ## How to clone this repository 
