@@ -112,3 +112,6 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
+
+# .NET SDK
+export PATH="$PATH:/usr/local/share/dotnet"
