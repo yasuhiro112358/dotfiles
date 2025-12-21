@@ -22,15 +22,14 @@ mv ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.git
 
 3. シンボリックリンクを作成
 ```bash
-cd ~/github.com/yasuhiro112358/dotfiles
-ln -s ./.bashrc ~/.bashrc
-ln -s ./.bash_profile ~/.bash_profile
-ln -s ./.zshrc ~/.zshrc
-ln -s ./.zprofile ~/.zprofile
-ln -s ./.aliases ~/.aliases
-ln -s ./.gitconfig ~/.gitconfig
-ln -s ./.gitignore_global ~/.gitignore_global
-ln -s ./.vimrc ~/.vimrc
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.bashrc ~/.bashrc
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.bash_profile ~/.bash_profile
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.zshrc ~/.zshrc
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.zprofile ~/.zprofile
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.aliases ~/.aliases
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.gitconfig ~/.gitconfig
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.gitignore_global ~/.gitignore_global
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.vimrc ~/.vimrc
 ```
 
 4. 検証
