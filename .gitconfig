@@ -1,10 +1,11 @@
 [user]
 	name = Yasuhiro WATANABE
-	email = info@nabeyasu.com
+	email = nabeyasu581@gmail.com
 [init]
 	defaultBranch = main
 [core]
 	excludesfile = /Users/yasuhiro/.gitignore_global
+	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
