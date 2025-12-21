@@ -5,13 +5,13 @@
 
 ## 前提
 - Git が利用できること
-- `~/dotfiles` にリポジトリを配置する
+- `~/github.com/yasuhiro112358/dotfiles` にリポジトリを配置する
 - 秘密情報はこのリポジトリに含めない
 
 ## 手順: 新規セットアップ
 1. リポジトリを取得
 ```bash
-git clone <YOUR_REPO_URL> ~/dotfiles
+git clone https://github.com/yasuhiro112358/dotfiles.git ~/github.com/yasuhiro112358/dotfiles
 ```
 
 2. 既存ファイルを退避
@@ -22,14 +22,15 @@ mv ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.git
 
 3. シンボリックリンクを作成
 ```bash
-ln -s ~/dotfiles/.bashrc ~/.bashrc
-ln -s ~/dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.zprofile ~/.zprofile
-ln -s ~/dotfiles/.aliases ~/.aliases
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.gitignore_global ~/.gitignore_global
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+cd ~/github.com/yasuhiro112358/dotfiles
+ln -s ./.bashrc ~/.bashrc
+ln -s ./.bash_profile ~/.bash_profile
+ln -s ./.zshrc ~/.zshrc
+ln -s ./.zprofile ~/.zprofile
+ln -s ./.aliases ~/.aliases
+ln -s ./.gitconfig ~/.gitconfig
+ln -s ./.gitignore_global ~/.gitignore_global
+ln -s ./.vimrc ~/.vimrc
 ```
 
 4. 検証
@@ -38,7 +39,7 @@ ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_g
 ```
 
 ## 手順: 更新
-1. `~/dotfiles` 内のファイルを編集
+1. `~/github.com/yasuhiro112358/dotfiles` 内のファイルを編集
 2. 変更をコミット・プッシュ
 ```bash
 git status

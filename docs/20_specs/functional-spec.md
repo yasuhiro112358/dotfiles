@@ -5,25 +5,25 @@
 
 ## 機能
 ### 1. 管理対象ファイル
-- `~/dotfiles/.zshrc`
-- `~/dotfiles/.zprofile`
-- `~/dotfiles/.bashrc`
-- `~/dotfiles/.bash_profile`
-- `~/dotfiles/.aliases`
-- `~/dotfiles/.gitconfig`
-- `~/dotfiles/.gitignore_global`
-- `~/dotfiles/.vimrc`
+- `~/github.com/yasuhiro112358/dotfiles/.zshrc`
+- `~/github.com/yasuhiro112358/dotfiles/.zprofile`
+- `~/github.com/yasuhiro112358/dotfiles/.bashrc`
+- `~/github.com/yasuhiro112358/dotfiles/.bash_profile`
+- `~/github.com/yasuhiro112358/dotfiles/.aliases`
+- `~/github.com/yasuhiro112358/dotfiles/.gitconfig`
+- `~/github.com/yasuhiro112358/dotfiles/.gitignore_global`
+- `~/github.com/yasuhiro112358/dotfiles/.vimrc`
 
 #### 補足: `.zprofile` と `.zshrc` の役割
 - `.zprofile`: **ログインシェル**で読み込まれる。PATH など環境変数系を置くのが一般的。
 - `.zshrc`: **対話シェル**で読み込まれる。エイリアスや補完など操作性設定を置くのが一般的。
 
 ### 2. 適用（リンク作成）
-- リポジトリを `~/dotfiles` に配置する。
+- リポジトリを `~/github.com/yasuhiro112358/dotfiles` に配置する。
 - ホームディレクトリの既存ファイルを退避したうえで、シンボリックリンクを作成する。
 
 ### 3. 更新
-- 変更は `~/dotfiles` 側のファイルに対して行い、Git で履歴管理する。
+- 変更は `~/github.com/yasuhiro112358/dotfiles` 側のファイルに対して行い、Git で履歴管理する。
 - 反映はリンクにより即時に有効化される。
 
 ### 4. 解除 / 巻き戻し
