@@ -46,12 +46,20 @@ git status
 ```
 
 ## 手順: 巻き戻し
-1. シンボリックリンクを削除
+1. 削除対象の確認
+```bash
+ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc}
+```
+確認のポイント:
+- `->` が表示され、シンボリックリンクであること
+- リンク先が `~/github.com/yasuhiro112358/dotfiles` 配下であること
+
+2. シンボリックリンクを削除
 ```bash
 rm ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.gitignore_global ~/.vimrc
 ```
 
-2. 退避ファイルを戻す
+3. 退避ファイルを戻す
 ```bash
 mv ~/dotfiles_backup/* ~/ 2>/dev/null
 ```
