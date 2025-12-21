@@ -122,3 +122,10 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# My Script
+export PATH="$HOME/bin:$PATH"
+
+
+# Created by `pipx` on 2025-12-18 14:01:22
+export PATH="$PATH:/Users/yasuhiro/.local/bin"
