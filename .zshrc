@@ -23,7 +23,7 @@ ZSH_THEME="agnoster"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -49,12 +49,12 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -72,46 +72,102 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  colored-man-pages
+  command-not-found
+  docker
+  docker-compose
+  npm
+  node
+  python
+  pip
+  brew
+  macos
+  history
+  extract
+  z
+)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# ============================================================================
+# User configuration (カスタム設定)
+# ============================================================================
+# 注意: このセクションはOMZの読み込み後に実行されます。
+# OMZが既に設定している項目（compinitなど）は重複して設定しないでください。
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# ----------------------------------------------------------------------------
+# Environment variables
+# ----------------------------------------------------------------------------
+# LANG/LC_* はシステムのデフォルト設定に従う（明示的な設定なし）
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# ----------------------------------------------------------------------------
+# History configuration (OMZのデフォルト設定を上書き)
+# ----------------------------------------------------------------------------
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_VERIFY              # 履歴展開を実行する前に確認
+setopt SHARE_HISTORY            # 履歴を複数のセッション間で共有
+setopt HIST_IGNORE_DUPS         # 連続する重複を履歴に記録しない
+setopt HIST_IGNORE_ALL_DUPS     # 重複するコマンドを古い方から削除
+setopt HIST_IGNORE_SPACE        # スペースで始まるコマンドを履歴に記録しない
+setopt HIST_REDUCE_BLANKS       # 余分な空白を削除して履歴に記録
+setopt HIST_SAVE_NO_DUPS        # 履歴ファイルに書き込む際、古いコマンドと同じの場合は新しい方を無視
+setopt INC_APPEND_HISTORY       # 履歴を即座に追加
+setopt EXTENDED_HISTORY         # タイムスタンプと実行時間を履歴に記録
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# ----------------------------------------------------------------------------
+# Completion configuration (OMZの補完設定を拡張)
+# ----------------------------------------------------------------------------
+# 注意: compinitはOMZが既に実行しているため、ここではzstyleのみ設定
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # 大文字小文字を区別しない補完
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"  # 補完候補に色を付ける
+zstyle ':completion:*' menu select                       # 補完候補を矢印キーで選択可能に
+setopt COMPLETE_IN_WORD         # 単語の途中でもカーソル位置で補完
+setopt ALWAYS_TO_END            # 補完後にカーソルを末尾に移動
+
+# ----------------------------------------------------------------------------
+# Directory navigation
+# ----------------------------------------------------------------------------
+setopt AUTO_CD                  # ディレクトリ名だけでcd
+setopt AUTO_PUSHD               # cdのたびにディレクトリスタックに追加
+setopt PUSHD_IGNORE_DUPS        # ディレクトリスタックに重複を追加しない
+setopt PUSHD_SILENT             # pushd/popd時にディレクトリスタックを表示しない
+
+# ----------------------------------------------------------------------------
+# Other useful options
+# ----------------------------------------------------------------------------
+setopt CORRECT                  # コマンドのスペルチェック
+setopt NO_BEEP                  # ビープ音を無効化
+setopt INTERACTIVE_COMMENTS     # コメントを有効化（#以降をコメントとして扱う）
+
+# ----------------------------------------------------------------------------
+# Zsh-specific Aliases (zsh固有のエイリアス)
+# ----------------------------------------------------------------------------
+# 注意: 共通エイリアスは ~/.aliases に記述
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias reload="source ~/.zshrc"
 
 
 
+# ============================================================================
+# Development tools and PATH configuration
+# ============================================================================
+
+# NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Add alias file
-if [ -f ~/.aliases ]; then
-  source ~/.aliases
-fi
 
 # .NET SDK
 export PATH="$PATH:/usr/local/share/dotnet"
@@ -123,9 +179,17 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# My Script
+# Custom scripts
 export PATH="$HOME/bin:$PATH"
 
-
-# Created by `pipx` on 2025-12-18 14:01:22
+# pipx
 export PATH="$PATH:/Users/yasuhiro/.local/bin"
+
+# ============================================================================
+# External configuration files
+# ============================================================================
+
+# Load custom aliases
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
