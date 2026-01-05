@@ -13,6 +13,7 @@
 - `~/github.com/yasuhiro112358/dotfiles/.gitconfig`
 - `~/github.com/yasuhiro112358/dotfiles/.gitignore_global`
 - `~/github.com/yasuhiro112358/dotfiles/.vimrc`
+- `~/github.com/yasuhiro112358/dotfiles/.p10k.zsh` (Powerlevel10k設定)
 
 #### 補足: `.zprofile` と `.zshrc` の役割
 - `.zprofile`: **ログインシェル**で読み込まれる。PATH など環境変数系を置くのが一般的。
@@ -34,4 +35,4 @@
 - 秘密情報は追加しない。
 
 ## 受入条件（最小）
-- `ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc}` で全て `dotfiles` 配下へのリンクであることが確認できる。
+- `ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc,.p10k.zsh}` で全て `dotfiles` 配下へのリンクであることが確認できる。

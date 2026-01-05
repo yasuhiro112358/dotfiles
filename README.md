@@ -20,6 +20,8 @@ ln -s ./.gitconfig ~/.gitconfig
 ln -s ./.gitignore_global ~/.gitignore_global
 
 ln -s ./.vimrc ~/.vimrc
+
+ln -s ./.p10k.zsh ~/.p10k.zsh
 ```
 
 ## How to clone this repository 

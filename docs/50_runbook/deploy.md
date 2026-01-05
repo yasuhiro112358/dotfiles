@@ -17,7 +17,7 @@ git clone https://github.com/yasuhiro112358/dotfiles.git ~/github.com/yasuhiro11
 2. 既存ファイルを退避
 ```bash
 mkdir -p ~/dotfiles_backup
-mv ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.gitignore_global ~/.vimrc ~/dotfiles_backup/ 2>/dev/null
+mv ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.gitignore_global ~/.vimrc ~/.p10k.zsh ~/dotfiles_backup/ 2>/dev/null
 ```
 
 3. シンボリックリンクを作成
@@ -30,11 +30,12 @@ ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.aliases ~/.aliases
 ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.gitconfig ~/.gitconfig
 ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.gitignore_global ~/.gitignore_global
 ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.vimrc ~/.vimrc
+ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.p10k.zsh ~/.p10k.zsh
 ```
 
 4. 検証
 ```bash
-ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc}
+ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc,.p10k.zsh}
 ```
 
 ## 手順: 更新
@@ -47,7 +48,7 @@ git status
 ## 手順: 巻き戻し
 1. 削除対象の確認
 ```bash
-ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc}
+ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc,.p10k.zsh}
 ```
 確認のポイント:
 - `->` が表示され、シンボリックリンクであること
@@ -55,7 +56,7 @@ ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_g
 
 2. シンボリックリンクを削除
 ```bash
-rm ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.gitignore_global ~/.vimrc
+rm ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.gitignore_global ~/.vimrc ~/.p10k.zsh
 ```
 
 3. 退避ファイルを戻す

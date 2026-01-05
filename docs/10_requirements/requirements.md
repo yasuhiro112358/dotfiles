@@ -6,7 +6,7 @@
 
 ## スコープ
 ### 対象（管理対象）
-- シェル設定: `.zshrc`, `.zprofile`, `.bashrc`, `.bash_profile`, `.aliases`
+- シェル設定: `.zshrc`, `.zprofile`, `.bashrc`, `.bash_profile`, `.aliases`, `.p10k.zsh`
 - Git 設定: `.gitconfig`, `.gitignore_global`
 - エディタ設定: `.vimrc`
 
