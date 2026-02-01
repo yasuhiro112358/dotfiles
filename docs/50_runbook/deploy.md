@@ -17,29 +17,37 @@ git clone https://github.com/yasuhiro112358/dotfiles.git ~/github.com/yasuhiro11
 2. 既存ファイルを退避
 ```bash
 mkdir -p ~/dotfiles_backup
-mv ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.gitignore_global ~/.vimrc ~/.p10k.zsh ~/dotfiles_backup/ 2>/dev/null
+mv ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.gitignore_global ~/.vimrc ~/.p10k.zsh ~/.claude/skills ~/dotfiles_backup/ 2>/dev/null
 ```
 
 3. シンボリックリンクを作成
 ```bash
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.bashrc ~/.bashrc
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.bash_profile ~/.bash_profile
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.zshrc ~/.zshrc
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.zprofile ~/.zprofile
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.aliases ~/.aliases
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.gitconfig ~/.gitconfig
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.gitignore_global ~/.gitignore_global
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.vimrc ~/.vimrc
-ln -s /Users/yasuhiro/github.com/yasuhiro112358/dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.bashrc ~/.bashrc
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.bash_profile ~/.bash_profile
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.zshrc ~/.zshrc
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.zprofile ~/.zprofile
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.aliases ~/.aliases
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.gitconfig ~/.gitconfig
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.gitignore_global ~/.gitignore_global
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.vimrc ~/.vimrc
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.p10k.zsh ~/.p10k.zsh
+
+# Claude Code skills
+mkdir -p ~/.claude
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/.claude/skills ~/.claude/skills
 ```
 
 4. 検証
 ```bash
 ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc,.p10k.zsh}
+ls -l ~/.claude/skills
 ```
+確認のポイント:
+- `->` が表示され、シンボリックリンクであること
+- リンク先が `~/github.com/yasuhiro112358/dotfiles/home` 配下であること
 
 ## 手順: 更新
-1. `~/github.com/yasuhiro112358/dotfiles` 内のファイルを編集
+1. `~/github.com/yasuhiro112358/dotfiles/home` 内のファイルを編集
 2. 変更をコミット・プッシュ
 ```bash
 git status
@@ -49,14 +57,16 @@ git status
 1. 削除対象の確認
 ```bash
 ls -l ~/{.zshrc,.zprofile,.bashrc,.bash_profile,.aliases,.gitconfig,.gitignore_global,.vimrc,.p10k.zsh}
+ls -l ~/.claude/skills
 ```
 確認のポイント:
 - `->` が表示され、シンボリックリンクであること
-- リンク先が `~/github.com/yasuhiro112358/dotfiles` 配下であること
+- リンク先が `~/github.com/yasuhiro112358/dotfiles/home` 配下であること
 
 2. シンボリックリンクを削除
 ```bash
 rm ~/.zshrc ~/.zprofile ~/.bashrc ~/.bash_profile ~/.aliases ~/.gitconfig ~/.gitignore_global ~/.vimrc ~/.p10k.zsh
+rm ~/.claude/skills
 ```
 
 3. 退避ファイルを戻す
