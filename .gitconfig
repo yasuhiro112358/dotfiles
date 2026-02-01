@@ -16,3 +16,5 @@
 	template = /Users/yasuhiro/.stCommitMsg
 [merge]
 	ff = false
+[pull]
+	rebase = false
