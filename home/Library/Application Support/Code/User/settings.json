@@ -2,7 +2,8 @@
     // -------------------------------------------------------
     // Editor
     // -------------------------------------------------------
-    "editor.fontFamily": "Ricty Diminished",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": false,
     "editor.renderWhitespace": "all",
     "editor.wordWrap": "on",
     "editor.accessibilitySupport": "off",
