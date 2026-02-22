@@ -1,0 +1,114 @@
+{
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "Ricty Diminished",
+    "editor.renderWhitespace": "all",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "explorer.confirmDelete": false,
+    "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "matlab.interrupt"
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[php]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+    },
+    "[ruby]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "[sql]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "mtxr.sqltools",
+    },
+    "sqltools.autoConnectTo": "",
+    "sqltools.format": {
+        "uppercase": true,
+        "linesBetweenQueries": 2
+    },
+    "cSpell.userWords": [
+        "autofetch",
+        "bson",
+        "CURLOPT",
+        "CURLOPT_CAINFO",
+        "divs",
+        "dotenv",
+        "HTTPHEADER",
+        "jsonify",
+        "logprobs",
+        "mbti",
+        "mbtis",
+        "mtxr",
+        "OPENAI",
+        "POSTFIELDS",
+        "RETURNTRANSFER",
+        "Ricty",
+        "sqltools"
+    ],
+    "explorer.confirmPasteNative": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "terminal.integrated.gpuAcceleration": "auto",
+    "git.openRepositoryInParentFolders": "always",
+    "githubPullRequests.createOnPublishBranch": "never",
+    "git.confirmSync": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "redhat.telemetry.enabled": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.createEnvironment.trigger": "off",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.startupEditor": "none",
+    "python.languageServer": "Pylance",
+    "vsicons.dontShowNewVersionMessage": true,
+    "files.associations": {
+        "*.cls": "vb",
+        "*.frm": "vb",
+        "*.css": "tailwindcss"
+    },
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "prisma.hidePrisma6Prompts": true
+}

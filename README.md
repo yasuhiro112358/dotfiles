@@ -22,6 +22,10 @@ ln -s ./.gitignore_global ~/.gitignore_global
 ln -s ./.vimrc ~/.vimrc
 
 ln -s ./.p10k.zsh ~/.p10k.zsh
+
+# VS Code
+ln -s ~/github.com/yasuhiro112358/dotfiles/home/Library/Application\ Support/Code/User/settings.json \
+      ~/Library/Application\ Support/Code/User/settings.json
 ```
 
 ## How to clone this repository 
