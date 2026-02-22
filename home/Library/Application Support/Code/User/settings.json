@@ -1,19 +1,58 @@
 {
-    "git.autofetch": true,
-    "window.zoomLevel": 1,
-    "files.autoSave": "onFocusChange",
+    // -------------------------------------------------------
+    // Editor
+    // -------------------------------------------------------
     "editor.fontFamily": "Ricty Diminished",
     "editor.renderWhitespace": "all",
-    "workbench.iconTheme": "vscode-icons",
-    "editor.accessibilitySupport": "off",
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "explorer.confirmDelete": false,
     "editor.wordWrap": "on",
+    "editor.accessibilitySupport": "off",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+
+    // -------------------------------------------------------
+    // Window / Workbench
+    // -------------------------------------------------------
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "none",
+
+    // -------------------------------------------------------
+    // Files / Explorer
+    // -------------------------------------------------------
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "*.cls": "vb",
+        "*.frm": "vb",
+        "*.css": "tailwindcss"
+    },
+    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+
+    // -------------------------------------------------------
+    // Terminal
+    // -------------------------------------------------------
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "terminal.integrated.gpuAcceleration": "auto",
     "terminal.integrated.commandsToSkipShell": [
         "matlab.interrupt"
     ],
     "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+    // -------------------------------------------------------
+    // Git
+    // -------------------------------------------------------
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always",
+    "githubPullRequests.createOnPublishBranch": "never",
+
+    // -------------------------------------------------------
+    // Language-specific
+    // -------------------------------------------------------
     "[html]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
@@ -29,6 +68,15 @@
         "editor.insertSpaces": true,
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[php]": {
         "editor.tabSize": 4,
         "editor.insertSpaces": true,
@@ -42,11 +90,15 @@
         "editor.insertSpaces": true,
         "editor.defaultFormatter": "mtxr.sqltools",
     },
-    "sqltools.autoConnectTo": "",
-    "sqltools.format": {
-        "uppercase": true,
-        "linesBetweenQueries": 2
+    "[dockercompose]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+
+    // -------------------------------------------------------
+    // Extensions
+    // -------------------------------------------------------
+
+    // cSpell
     "cSpell.userWords": [
         "autofetch",
         "bson",
@@ -66,49 +118,44 @@
         "Ricty",
         "sqltools"
     ],
-    "explorer.confirmPasteNative": false,
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
-    "terminal.integrated.gpuAcceleration": "auto",
-    "git.openRepositoryInParentFolders": "always",
-    "githubPullRequests.createOnPublishBranch": "never",
-    "git.confirmSync": false,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.donotVerifyTags": true,
+
+    // GitHub Copilot
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
         "markdown": true,
         "scminput": false
     },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "redhat.telemetry.enabled": true,
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[dockercompose]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "python.createEnvironment.trigger": "off",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.startupEditor": "none",
-    "python.languageServer": "Pylance",
-    "vsicons.dontShowNewVersionMessage": true,
-    "files.associations": {
-        "*.cls": "vb",
-        "*.frm": "vb",
-        "*.css": "tailwindcss"
-    },
     "github.copilot.nextEditSuggestions.enabled": false,
-    "extensions.ignoreRecommendations": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.quickSuggestions": {
-        "strings": "on"
+
+    // JavaScript
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    // Live Server
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+
+    // Prisma
+    "prisma.hidePrisma6Prompts": true,
+
+    // Python
+    "python.createEnvironment.trigger": "off",
+    "python.languageServer": "Pylance",
+
+    // Red Hat
+    "redhat.telemetry.enabled": true,
+
+    // SQLTools
+    "sqltools.autoConnectTo": "",
+    "sqltools.format": {
+        "uppercase": true,
+        "linesBetweenQueries": 2
     },
-    "prisma.hidePrisma6Prompts": true
+
+    // VS Icons
+    "vsicons.dontShowNewVersionMessage": true,
+
+    // Misc
+    "extensions.ignoreRecommendations": true,
+    "security.workspace.trust.untrustedFiles": "open"
 }
