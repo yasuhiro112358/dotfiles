@@ -1,34 +1,20 @@
 # dotfiles
-My dotfiles
 
+Mac のドットファイルをシンボリックリンク方式で Git 管理するリポジトリ。
 
-## Command to create symbolic links
-- 「~/github.com/yasuhiro112358/dotfiles/」でファイルをgit管理する
-- 各ファイルはホームディレクトリ（本来の位置）にシンボリックリンクを作成することで有効にする
+## セットアップ
 
-```bash
-cd ~/github.com/yasuhiro112358/dotfiles
-ln -s ./.bashrc ~/.bashrc
-ln -s ./.bash_profile ~/.bash_profile
-
-ln -s ./.zshrc ~/.zshrc
-ln -s ./.zprofile ~/.zprofile
-
-ln -s ./.aliases ~/.aliases
-
-ln -s ./.gitconfig ~/.gitconfig
-ln -s ./.gitignore_global ~/.gitignore_global
-
-ln -s ./.vimrc ~/.vimrc
-
-ln -s ./.p10k.zsh ~/.p10k.zsh
-
-# VS Code
-ln -s ~/github.com/yasuhiro112358/dotfiles/home/Library/Application\ Support/Code/User/settings.json \
-      ~/Library/Application\ Support/Code/User/settings.json
-```
-
-## How to clone this repository 
 ```bash
 git clone https://github.com/yasuhiro112358/dotfiles.git ~/github.com/yasuhiro112358/dotfiles
 ```
+
+詳細な手順（バックアップ・シンボリックリンク作成・検証・ロールバック）は [docs/50_runbook/deploy.md](docs/50_runbook/deploy.md) を参照。
+
+## ドキュメント
+
+| カテゴリ | 内容 |
+|---------|------|
+| [docs/10_requirements/](docs/10_requirements/) | 目的・スコープ・制約 |
+| [docs/20_specs/](docs/20_specs/) | 機能仕様 |
+| [docs/40_adr/](docs/40_adr/) | 設計判断の記録（ADR） |
+| [docs/50_runbook/](docs/50_runbook/) | 運用手順 |

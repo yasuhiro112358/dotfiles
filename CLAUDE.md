@@ -46,6 +46,9 @@ docs/          # ドキュメント（種別ごとに整理）
 - `home/.aliases` — Bash/Zsh 共通エイリアス
 - `home/Library/Application Support/Code/User/settings.json` — VS Code 設定
 - `home/.claude/skills/commit/SKILL.md` — Conventional Commits 用 `/commit` スキル
+- `home/.claude/skills/doc/SKILL.md` — ドキュメント自動生成オーケストレーター `/doc` スキル
+- `home/.claude/skills/doc-{overview,req,spec,design,adr,runbook,dev}/SKILL.md` — 種別ごとの個別ドキュメント生成スキル
+- `home/.claude/skills/doc-quality/SKILL.md` — ドキュメント品質レビュー `/doc-quality` スキル
 
 ## 規約
 

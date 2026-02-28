@@ -16,7 +16,7 @@
     // Window / Workbench
     // -------------------------------------------------------
     "window.zoomLevel": 1,
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
 
     // -------------------------------------------------------
@@ -89,7 +89,6 @@
     "[sql]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true,
-        "editor.defaultFormatter": "mtxr.sqltools",
     },
     "[dockercompose]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -158,5 +157,5 @@
 
     // Misc
     "extensions.ignoreRecommendations": true,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
 }
