@@ -3,6 +3,7 @@
     // Editor
     // -------------------------------------------------------
     "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 14,
     "editor.fontLigatures": false,
     "editor.renderWhitespace": "all",
     "editor.wordWrap": "on",
@@ -15,7 +16,7 @@
     // -------------------------------------------------------
     // Window / Workbench
     // -------------------------------------------------------
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
 
@@ -37,6 +38,7 @@
     // -------------------------------------------------------
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "terminal.integrated.fontSize": 14,
     "terminal.integrated.gpuAcceleration": "auto",
     "terminal.integrated.commandsToSkipShell": [
         "matlab.interrupt"
@@ -152,10 +154,7 @@
         "linesBetweenQueries": 2
     },
 
-    // VS Icons
-    "vsicons.dontShowNewVersionMessage": true,
-
     // Misc
     "extensions.ignoreRecommendations": true,
-    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.untrustedFiles": "open"
 }
